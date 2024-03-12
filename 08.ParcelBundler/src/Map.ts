@@ -1,6 +1,6 @@
 /// <reference types="@types/google.maps" />
 
-interface Mappable {
+export interface Mappable {
   address: {
     lat: number;
     lng: number;

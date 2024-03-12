@@ -1,5 +1,6 @@
 import { faker } from "@faker-js/faker";
-export class User {
+import { Mappable } from "./Map";
+export class User implements Mappable{
   name: string; // Khai báo kiểu dữ liệu cho name
   address: {
     lat: number;
