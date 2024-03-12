@@ -13,4 +13,11 @@ export class User {
       lng: parseFloat(faker.address.longitude()), // Gán giá trị cho lng
     };
   } // constructor
+  markerContent(): string {
+    return `
+      <div>
+        <h1>User Name: ${this.name}</h1>
+      </div>
+    `;
+  }
 }
