@@ -1,8 +1,11 @@
 /// <reference types="@types/google.maps" />
 
-import { Company } from "./Company";
-import { User } from "./User";
-
+interface Mappable {
+  address: {
+    lat: number;
+    lng: number;
+  };
+}
 export class Map {
   private customMap: google.maps.Map;
   constructor(divId: string) {
@@ -17,13 +20,15 @@ export class Map {
       }
     );
   }
-  addMarker(mappable: User | Company): void { // mappable: sẽ có kiểu dữ liệu là User hoặc Company, và giữa 2 class này có chung thuộc tính address, nên có thể sử dụng chung
+  addMarker(mappable: Mappable): void {
+    // mappable: sẽ có kiểu dữ liệu là User hoặc Company,
+    // và giữa 2 class này có chung thuộc tính address, nên có thể sử dụng chung`
     new google.maps.Marker({
       map: this.customMap,
       position: {
         lat: mappable.address.lat,
-        lng: mappable.address.lng
-      }
-    })
+        lng: mappable.address.lng,
+      },
+    });
   }
 }
