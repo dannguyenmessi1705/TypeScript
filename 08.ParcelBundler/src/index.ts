@@ -1,3 +1,4 @@
+/// <reference types="@types/google.maps" />
 import { User } from "./User";
 const user = new User(); // Khởi tạo một đối tượng từ class
 console.log(user); // Hiển thị giá trị của name
