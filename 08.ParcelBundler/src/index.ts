@@ -8,3 +8,5 @@ console.log(company); // Hiển thị giá trị của companyName
 
 import { Map } from "./Map";
 const map = new Map("map"); // Khởi tạo một đối tượng từ class
+map.addMarker(user); // Thêm marker cho user
+map.addMarker(company); // Thêm marker cho company
